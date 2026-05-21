@@ -387,19 +387,21 @@
 
       <!-- PrimarIA -->
       <article class="project">
-        <span class="tag">GovTech · Public sector</span>
-        <h3><span class="name">PrimarIA</span> &mdash; AI platform for Romanian municipalities</h3>
-        <p class="subtitle">Dual-portal, role-scoped, audit-grade.</p>
+        <span class="tag">GovTech · Tax SaaS</span>
+        <h3><span class="name">PrimărIA</span> &mdash; multi-tenant tax SaaS for Romanian municipalities</h3>
+        <p class="subtitle">SaaS-first, AI-ready. Multi-tenant via Postgres RLS. ANAF-compliant.</p>
         <p>
-          Citizen-facing taxpayer portal plus employee/admin workspace, driven by
-          role-scoped agents and a hash-chained audit log. Role-scoping enforced at the
-          infrastructure layer, not the prompt &mdash; built for environments where
-          "the model decided not to" is not an acceptable security answer.
+          Production-grade tax administration platform for ~2,800 Romanian communes &mdash;
+          deterministic tax engine for buildings/land/vehicles, PatrimVen XML export to ANAF,
+          dual-portal architecture, AES-256-GCM CNP encryption, PWA offline for rural areas.
+          The AI agent surface is designed-for and lands on top of a substrate that already
+          answers correctly without it.
         </p>
         <div class="stack">
-          <span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span>
-          <span>pgvector</span><span>Redis</span><span>Docker</span>
-          <span>Multi-LLM</span><span>OCR</span>
+          <span>Next.js 14</span><span>TypeScript</span><span>PostgreSQL + RLS</span>
+          <span>Prisma 6</span><span>PgBouncer</span><span>Redis + BullMQ</span>
+          <span>MinIO</span><span>NextAuth v5</span><span>TOTP 2FA</span>
+          <span>@react-pdf/renderer</span><span>next-intl (RO/HU/EN)</span><span>Docker</span>
         </div>
         <div class="links">
           <a class="solid" href="PrimarIA_Case_Study.pdf">📄 Case study (PDF)</a>
@@ -426,7 +428,7 @@
         </div>
         <div class="links">
           <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
-          <a href="https://github.com/Bogdan0708/SAAS_Agency" target="_blank" rel="noopener">↗ GitHub</a>
+          <a href="https://github.com/Bogdan0708/MitchAI" target="_blank" rel="noopener">↗ GitHub</a>
         </div>
       </article>
 
