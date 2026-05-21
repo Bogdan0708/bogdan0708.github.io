@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vasile Bogdan Godja — Applied AI Engineer</title>
+<meta name="description" content="Founder-operator turned applied AI engineer. Production AI systems for EU funding, public-sector, and hospitality. Stack: Python · FastAPI · Next.js · Postgres · vector DBs · Docker · multi-provider LLM routing." />
+<meta property="og:title" content="Vasile Bogdan Godja — Applied AI Engineer" />
+<meta property="og:description" content="Production AI systems for EU funding, public sector, and hospitality. EuFund · PrimarIA · MitchAI." />
+<style>
+  :root {
+    --accent: #8a9a7b;
+    --accent-dark: #5a6b4d;
+    --accent-soft: #f1efe7;
+    --bg: #fbfaf6;
+    --card: #ffffff;
+    --rule: #e2dfd5;
+    --text: #1a1a1a;
+    --muted: #5e5e5e;
+    --serif: "Cambria", "Georgia", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-dark); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Hero ---------- */
+  header.hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 .accent { color: var(--accent); }
+  .hero .title {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 600;
+    margin: 0 0 24px 0;
+    color: #222;
+  }
+  .hero .pitch {
+    max-width: 720px;
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+    margin: 0 0 26px 0;
+  }
+  .hero .pitch strong { color: #111; }
+  .hero .pitch em { font-style: normal; color: var(--accent-dark); font-weight: 600; }
+  .hero .contact-row {
+    display: flex; flex-wrap: wrap; gap: 18px;
+    font-size: 14px; color: var(--muted);
+    align-items: center;
+  }
+  .hero .contact-row a { font-weight: 500; }
+  .hero .cta-row {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 24px;
+  }
+  .cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600; font-size: 14px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .cta.primary { background: var(--accent); color: #fff; }
+  .cta.primary:hover { background: var(--accent-dark); color: #fff; text-decoration: none; }
+  .cta.secondary {
+    background: transparent;
+    color: var(--accent-dark);
+    border-color: var(--accent);
+  }
+  .cta.secondary:hover { background: var(--accent-soft); text-decoration: none; }
+
+  /* ---------- Section ---------- */
+  section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section:last-of-type { border-bottom: 0; }
+  section h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    color: #111;
+  }
+  section .lead {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 0 0 36px 0;
+    max-width: 680px;
+  }
+
+  /* ---------- Project grid ---------- */
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 760px) {
+    .projects { grid-template-columns: repeat(2, 1fr); }
+    .project.featured { grid-column: 1 / -1; }
+  }
+  .project {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 28px 28px 24px;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  }
+  .project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    border-color: var(--accent);
+  }
+  .project .tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin-bottom: 14px;
+  }
+  .project h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 4px 0;
+    color: #111;
+  }
+  .project h3 .name { color: var(--accent-dark); }
+  .project .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 14px 0;
+    font-style: italic;
+  }
+  .project p {
+    font-size: 15px;
+    color: #333;
+    margin: 0 0 14px 0;
+    flex: 1;
+  }
+  .project .stack {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin: 6px 0 18px 0;
+  }
+  .project .stack span {
+    background: #f6f4ee;
+    border: 1px solid var(--rule);
+    color: #444;
+    font-size: 11.5px;
+    padding: 2px 9px;
+    border-radius: 999px;
+  }
+  .project .links {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .project .links a {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--accent);
+    color: var(--accent-dark);
+  }
+  .project .links a:hover { background: var(--accent-soft); text-decoration: none; }
+  .project .links a.solid { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .project .links a.solid:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  @media (min-width: 760px) {
+    .about-grid { grid-template-columns: 1.4fr 1fr; }
+  }
+  .about-grid p {
+    font-size: 15.5px;
+    margin: 0 0 14px 0;
+    color: #2a2a2a;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .stat .big {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-dark);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .stat .label {
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  /* ---------- Skills strip ---------- */
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  @media (min-width: 760px) {
+    .skills { grid-template-columns: repeat(2, 1fr); column-gap: 28px; }
+  }
+  .skill-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14.5px;
+  }
+  .skill-row .cat {
+    display: inline-block;
+    min-width: 130px;
+    font-weight: 700;
+    color: var(--accent-dark);
+  }
+  .skill-row .items { color: #444; }
+
+  /* ---------- Downloads ---------- */
+  .downloads {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 600px) {
+    .downloads { grid-template-columns: repeat(3, 1fr); }
+  }
+  .dl {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .dl:hover { border-color: var(--accent); transform: translateY(-1px); text-decoration: none; }
+  .dl .dl-eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent-dark);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .dl .dl-title {
+    font-family: var(--serif);
+    font-weight: 700;
+    color: #111;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .dl .dl-meta {
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); border-bottom: 1px dotted var(--rule); }
+  footer a:hover { color: var(--accent-dark); border-color: var(--accent-dark); text-decoration: none; }
+
+  /* small touches */
+  .dot { color: var(--rule); margin: 0 4px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Portfolio · 2026</div>
+    <h1>Vasile Bogdan <span class="accent">Godja</span></h1>
+    <p class="title">Applied AI Engineer · AI Systems &amp; Workflow Automation</p>
+
+    <p class="pitch">
+      Founder-operator turned applied AI engineer. I build production AI systems &mdash;
+      <em>multi-agent orchestration, RAG, and workflow automation</em> &mdash; for problems
+      I've personally worked inside: <strong>EU funding</strong>, <strong>public-sector
+      administration</strong>, and <strong>hospitality operations</strong>. 10+ years
+      running businesses end-to-end, including &euro;500K+ in EU-funded projects.
+      I think like an operator and ship like an engineer.
+    </p>
+
+    <div class="contact-row">
+      <span>📍 London, UK</span><span class="dot">·</span>
+      <a href="mailto:godjabogdan@gmail.com">godjabogdan@gmail.com</a><span class="dot">·</span>
+      <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">github.com/Bogdan0708</a><span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/vasile-godja-6488051a5" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta primary" href="Vasile_Bogdan_Godja_AI.pdf">Download CV (PDF)</a>
+      <a class="cta secondary" href="EuFund_Case_Study.pdf">Read the EuFund case study</a>
+      <a class="cta secondary" href="mailto:godjabogdan@gmail.com?subject=Applied%20AI%20Engineer%20role">Book a 20-min call</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="container">
+    <h2>Selected projects</h2>
+    <p class="lead">
+      Three production AI systems I designed, built, and own end-to-end &mdash; each one
+      a deep case study in applied LLM systems, multi-agent orchestration, and the
+      operational reality of a specific vertical.
+    </p>
+
+    <div class="projects">
+
+      <!-- EuFund -->
+      <article class="project featured">
+        <span class="tag">Flagship · Live deployment</span>
+        <h3><span class="name">EuFund</span> &mdash; AI-powered EU funding &amp; project management platform</h3>
+        <p class="subtitle">A multi-agent system that turns the fragmented, paperwork-heavy EU funding landscape into a deterministic, auditable workflow.</p>
+        <p>
+          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
+          each stage driven by structured outputs, citation enforcement, and cost-aware
+          multi-provider LLM routing. Built as a deterministic state machine that calls
+          the LLM as a tool &mdash; not a free-roaming agent loop.
+        </p>
+        <div class="stack">
+          <span>Next.js 14</span><span>TypeScript</span><span>FastAPI</span>
+          <span>PostgreSQL + RLS</span><span>Qdrant</span><span>Redis</span>
+          <span>Drizzle ORM</span><span>Docker</span><span>Google Cloud Run</span>
+          <span>Claude</span><span>OpenAI</span><span>Gemini</span><span>Local LLMs</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a href="https://github.com/Bogdan0708/EuFund" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </article>
+
+      <!-- PrimarIA -->
+      <article class="project">
+        <span class="tag">GovTech · Public sector</span>
+        <h3><span class="name">PrimarIA</span> &mdash; AI platform for Romanian municipalities</h3>
+        <p class="subtitle">Dual-portal, role-scoped, audit-grade.</p>
+        <p>
+          Citizen-facing taxpayer portal plus employee/admin workspace, driven by
+          role-scoped agents and a hash-chained audit log. Role-scoping enforced at the
+          infrastructure layer, not the prompt &mdash; built for environments where
+          "the model decided not to" is not an acceptable security answer.
+        </p>
+        <div class="stack">
+          <span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span>
+          <span>pgvector</span><span>Redis</span><span>Docker</span>
+          <span>Multi-LLM</span><span>OCR</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="PrimarIA_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </article>
+
+      <!-- MitchAI -->
+      <article class="project">
+        <span class="tag">Vertical AI · Hospitality</span>
+        <h3><span class="name">MitchAI</span> &mdash; vertical operational AI for hospitality</h3>
+        <p class="subtitle">Multi-agent ops suite on hybrid local + cloud LLM infra.</p>
+        <p>
+          Ops, Media, Menu, Legal, and Stock agents coordinated by a planner agent,
+          wired together with n8n. WhatsApp-first approval surface; local LLMs for
+          high-volume tasks so per-outlet economics stay viable for independent operators.
+          Grounded in 10+ years on the operator side of the problem.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>FastAPI</span><span>n8n</span>
+          <span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+          <span>Ollama (local)</span><span>Claude</span><span>OpenAI</span>
+          <span>WhatsApp API</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <p class="lead">
+      I bridge two worlds most candidates don't: 10+ years of hands-on business
+      operations and 6+ months of full-stack applied AI engineering.
+    </p>
+
+    <div class="about-grid">
+      <div>
+        <p>
+          Before EuFund, PrimarIA, and MitchAI, I spent a decade running
+          high-performing teams in the UK hospitality industry &mdash; Restaurant
+          Manager at <strong>108 Brasserie</strong> (Marylebone Hotel), Hospitality
+          Manager at <strong>London Business School</strong> (50-person team serving
+          1,000&ndash;2,000 guests/day), General Manager at <strong>The Crown</strong>
+          (Mosaic Pub &amp; Dining), Assistant GM at <strong>Head of the River</strong>
+          (Fuller's, Oxford).
+        </p>
+        <p>
+          I'm also the founder of <em>Mitch from Transylvania</em>, a London food-market
+          business, and former GM of a Romanian restoration company specialising in
+          UNESCO and heritage-listed sites &mdash; where I personally secured and
+          managed <strong>&euro;500K+ in EU grant funding</strong> end-to-end.
+        </p>
+        <p>
+          That operator background is the design substrate for everything I build.
+          I'm opinionated about which 20% of a workflow not to automate, and honest
+          about which AI surfaces deserve confidence and which deserve a hard
+          "refuse and route."
+        </p>
+        <p>
+          Languages: English (fluent), Romanian (native), Spanish &amp; Italian
+          (intermediate), French (beginner).
+        </p>
+      </div>
+
+      <aside>
+        <div class="stats">
+          <div class="stat">
+            <div class="big">10+ yrs</div>
+            <div class="label">Operations leadership across UK hospitality</div>
+          </div>
+          <div class="stat">
+            <div class="big">&euro;500K+</div>
+            <div class="label">EU-funded projects I personally managed</div>
+          </div>
+          <div class="stat">
+            <div class="big">50+</div>
+            <div class="label">Largest team led under live service</div>
+          </div>
+          <div class="stat">
+            <div class="big">3</div>
+            <div class="label">Production AI systems shipped end-to-end</div>
+          </div>
+          <div class="stat">
+            <div class="big">4×</div>
+            <div class="label">LLM providers in routed production</div>
+          </div>
+          <div class="stat">
+            <div class="big">+98%</div>
+            <div class="label">Online sales growth I drove (2020&ndash;2022)</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <p class="lead">
+      Hands-on across the stack &mdash; from agent orchestration down to the Postgres
+      indexes that make retrieval not embarrassing.
+    </p>
+
+    <div class="skills">
+      <div class="skill-row"><span class="cat">AI engineering</span><span class="items">LLM apps · multi-agent orchestration · RAG / vector search · structured outputs · multi-model routing · streaming · evals · observability · cost optimisation</span></div>
+      <div class="skill-row"><span class="cat">Backend &amp; infra</span><span class="items">Python · FastAPI · Next.js 14 / TypeScript · PostgreSQL · pgvector · Qdrant · Drizzle · Redis · Docker · Google Cloud Run · REST · async I/O</span></div>
+      <div class="skill-row"><span class="cat">Automation &amp; workflow</span><span class="items">n8n · workflow design · event-driven systems · webhook integration · hybrid local + cloud LLMs</span></div>
+      <div class="skill-row"><span class="cat">Tooling</span><span class="items">Claude Code · Codex · Gemini CLI · Cursor · GitHub Actions · Cloud Build · gitleaks · Playwright · Vitest</span></div>
+      <div class="skill-row"><span class="cat">Operations &amp; delivery</span><span class="items">Product thinking · P&amp;L ownership · stakeholder management · compliance workflows · EU-funded project delivery · cross-functional leadership</span></div>
+      <div class="skill-row"><span class="cat">Languages</span><span class="items">English (fluent) · Romanian (native) · Spanish (intermediate) · Italian (intermediate) · French (beginner)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOADS ============ -->
+<section id="downloads">
+  <div class="container">
+    <h2>Documents</h2>
+    <p class="lead">
+      Everything in one place &mdash; CV in two flavours, plus all three case studies.
+    </p>
+
+    <div class="downloads">
+      <a class="dl" href="Vasile_Bogdan_Godja_AI.pdf">
+        <div class="dl-eyebrow">CV · Full</div>
+        <div class="dl-title">Full CV (2 pages)</div>
+        <div class="dl-meta">Long form · for direct hiring conversations</div>
+      </a>
+      <a class="dl" href="Vasile_Bogdan_Godja_AI_1page.pdf">
+        <div class="dl-eyebrow">CV · 1-page</div>
+        <div class="dl-title">Startup CV (1 page)</div>
+        <div class="dl-meta">Compact · for Wellfound / YC / Otta-style applications</div>
+      </a>
+      <a class="dl" href="EuFund_Case_Study.pdf">
+        <div class="dl-eyebrow">Case study</div>
+        <div class="dl-title">EuFund (5 pages)</div>
+        <div class="dl-meta">Architecture · multi-agent · multi-provider routing</div>
+      </a>
+      <a class="dl" href="PrimarIA_Case_Study.pdf">
+        <div class="dl-eyebrow">Case study</div>
+        <div class="dl-title">PrimarIA (5 pages)</div>
+        <div class="dl-meta">GovTech · role-scoping · audit trail</div>
+      </a>
+      <a class="dl" href="MitchAI_Case_Study.pdf">
+        <div class="dl-eyebrow">Case study</div>
+        <div class="dl-title">MitchAI (5 pages)</div>
+        <div class="dl-meta">Vertical AI · hybrid local + cloud · n8n</div>
+      </a>
+      <a class="dl" href="https://github.com/Bogdan0708" target="_blank" rel="noopener">
+        <div class="dl-eyebrow">Code</div>
+        <div class="dl-title">GitHub · @Bogdan0708</div>
+        <div class="dl-meta">Pinned repos · EuFund, PrimarIA, MitchAI</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      &copy; 2026 Vasile Bogdan Godja &nbsp;·&nbsp;
+      <a href="mailto:godjabogdan@gmail.com">godjabogdan@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/vasile-godja-6488051a5" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p style="font-size:12px; opacity:0.6;">
+      Built single-file &mdash; no frameworks, no trackers, no JS dependencies.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
