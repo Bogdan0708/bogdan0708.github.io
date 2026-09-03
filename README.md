@@ -14,13 +14,13 @@ EuFund remains an earlier portfolio prototype with a public case study, but its 
 ## Contents
 
 - `index.html` — portfolio landing page (single file, no dependencies)
-- `Vasile_Bogdan_Godja_AI.pdf` — full CV (3 pages)
+- `Vasile_Bogdan_Godja_AI.pdf` — full CV (2 pages)
 - `Vasile_Bogdan_Godja_AI_1page.pdf` — startup CV (1 page)
-- `EuFund_Case_Study.pdf` — 10-page EuFund case study (source repository is private; no live-service claim)
-- `PrimarIA_Case_Study.pdf` — 10-page PrimărIA case study (public portfolio/pilot-stage GovTech work)
-- `MitchAI_Case_Study.pdf` — 10-page MitchAI case study (supporting hospitality AI work)
+- `EuFund_Case_Study.pdf` — 4-page EuFund case study (source repository is private; no live-service claim)
+- `PrimarIA_Case_Study.pdf` — 4-page PrimărIA case study (public portfolio/pilot-stage GovTech work)
+- `MitchAI_Case_Study.pdf` — 4-page MitchAI case study (supporting hospitality AI work)
 
-The PDF binaries are retained as existing artifacts and may contain older wording; this truth-alignment pass changes only `index.html` and `README.md`.
+The PDFs are generated from the private `cv_other` repository's `build_recruiter_documents.py` and copied here byte-for-byte; regenerate there rather than editing the binaries.
 
 ## Contact
 
