@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vasile Bogdan Godja — Applied AI Engineer</title>
-<meta name="description" content="Founder-operator turned applied AI engineer. Production AI systems for EU funding, public-sector, and hospitality. Stack: Python · FastAPI · Next.js · Postgres · vector DBs · Docker · multi-provider LLM routing." />
+<meta name="description" content="Founder-operator turned applied AI engineer. Inspectable portfolio systems for EU funding, public-sector, and hospitality workflows. Stack: TypeScript · Next.js · Node.js · Postgres · Docker · LLM tooling." />
 <meta property="og:title" content="Vasile Bogdan Godja — Applied AI Engineer" />
-<meta property="og:description" content="Production AI systems for EU funding, public sector, and hospitality. EuFund · PrimarIA · MitchAI." />
+<meta property="og:description" content="Applied AI portfolio: PrimărIA, Grant Scout, EuFund, and supporting engineering work." />
 <style>
   :root {
     --accent: #8a9a7b;
@@ -327,7 +327,7 @@
     <p class="title">Applied AI Engineer · AI Systems &amp; Workflow Automation</p>
 
     <p class="pitch">
-      Founder-operator turned applied AI engineer. I build production AI systems &mdash;
+      Founder-operator turned applied AI engineer. I build inspectable AI portfolio systems &mdash;
       <em>multi-agent orchestration, RAG, and workflow automation</em> &mdash; for problems
       I've personally worked inside: <strong>EU funding</strong>, <strong>public-sector
       administration</strong>, and <strong>hospitality operations</strong>. 10+ years
@@ -344,7 +344,7 @@
 
     <div class="cta-row">
       <a class="cta primary" href="Vasile_Bogdan_Godja_AI.pdf">Download CV (PDF)</a>
-      <a class="cta secondary" href="EuFund_Case_Study.pdf">Read the EuFund case study</a>
+      <a class="cta secondary" href="https://github.com/Bogdan0708/grant-scout" target="_blank" rel="noopener">Inspect Grant Scout</a>
       <a class="cta secondary" href="mailto:godjabogdan@gmail.com?subject=Applied%20AI%20Engineer%20role">Book a 20-min call</a>
     </div>
   </div>
@@ -355,47 +355,22 @@
   <div class="container">
     <h2>Selected projects</h2>
     <p class="lead">
-      Three production AI systems I designed, built, and own end-to-end &mdash; each one
-      a deep case study in applied LLM systems, multi-agent orchestration, and the
-      operational reality of a specific vertical.
+      Start with two public, inspectable proof assets. Then read the EuFund case study for
+      the earlier private-source prototype that informed this work.
     </p>
 
     <div class="projects">
 
-      <!-- EuFund -->
-      <article class="project featured">
-        <span class="tag">Flagship · Live deployment</span>
-        <h3><span class="name">EuFund</span> &mdash; AI-powered EU funding &amp; project management platform</h3>
-        <p class="subtitle">A multi-agent system that turns the fragmented, paperwork-heavy EU funding landscape into a deterministic, auditable workflow.</p>
-        <p>
-          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
-          each stage driven by structured outputs, citation enforcement, and cost-aware
-          multi-provider LLM routing. Built as a deterministic state machine that calls
-          the LLM as a tool &mdash; not a free-roaming agent loop.
-        </p>
-        <div class="stack">
-          <span>Next.js 14</span><span>TypeScript</span><span>FastAPI</span>
-          <span>PostgreSQL + RLS</span><span>Qdrant</span><span>Redis</span>
-          <span>Drizzle ORM</span><span>Docker</span><span>Google Cloud Run</span>
-          <span>Claude</span><span>OpenAI</span><span>Gemini</span><span>Local LLMs</span>
-        </div>
-        <div class="links">
-          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
-          <a href="https://github.com/Bogdan0708/EuFund" target="_blank" rel="noopener">↗ GitHub</a>
-        </div>
-      </article>
-
       <!-- PrimarIA -->
       <article class="project">
-        <span class="tag">GovTech · Tax SaaS</span>
+        <span class="tag">Primary proof · Active development</span>
         <h3><span class="name">PrimărIA</span> &mdash; multi-tenant tax SaaS for Romanian municipalities</h3>
-        <p class="subtitle">SaaS-first, AI-ready. Multi-tenant via Postgres RLS. ANAF-compliant.</p>
+        <p class="subtitle">Public GovTech portfolio implementation with tenant isolation and deterministic workflows.</p>
         <p>
-          Production-grade tax administration platform for ~2,800 Romanian communes &mdash;
-          deterministic tax engine for buildings/land/vehicles, PatrimVen XML export to ANAF,
-          dual-portal architecture, AES-256-GCM CNP encryption, PWA offline for rural areas.
-          The AI agent surface is designed-for and lands on top of a substrate that already
-          answers correctly without it.
+          Active-development tax administration platform with deterministic calculations for
+          buildings, land, and vehicles; role-scoped portals; audit records; XML export tooling;
+          and offline-oriented PWA support. It is portfolio and pilot-stage work, with no public
+          deployment or production/compliance certification claimed.
         </p>
         <div class="stack">
           <span>Next.js 14</span><span>TypeScript</span><span>PostgreSQL + RLS</span>
@@ -409,26 +384,47 @@
         </div>
       </article>
 
-      <!-- MitchAI -->
+      <!-- Grant Scout -->
       <article class="project">
-        <span class="tag">Vertical AI · Hospitality</span>
-        <h3><span class="name">MitchAI</span> &mdash; vertical operational AI for hospitality</h3>
-        <p class="subtitle">Multi-agent ops suite on hybrid local + cloud LLM infra.</p>
+        <span class="tag">Primary proof · Public repository</span>
+        <h3><span class="name">Grant Scout</span> &mdash; cited EU funding agent demo</h3>
+        <p class="subtitle">A deliberately small agentic-RAG system whose evidence and control flow can be inspected end-to-end.</p>
         <p>
-          Ops, Media, Menu, Legal, and Stock agents coordinated by a planner agent,
-          wired together with n8n. WhatsApp-first approval surface; local LLMs for
-          high-volume tasks so per-outlet economics stay viable for independent operators.
-          Grounded in 10+ years on the operator side of the problem.
+          Searches a curated 30-record snapshot dated 29 August 2026, applies deterministic
+          eligibility checks, and cites official sources. CI runs lint, typecheck, tests, and
+          build. The documented 97.5% evaluation is historical and was not freshly reproduced
+          by the latest secret-free workflow run. Deployment is pending; this is not a live
+          funding catalogue or funding advice.
         </p>
         <div class="stack">
-          <span>Python</span><span>FastAPI</span><span>n8n</span>
-          <span>PostgreSQL</span><span>Redis</span><span>Docker</span>
-          <span>Ollama (local)</span><span>Claude</span><span>OpenAI</span>
-          <span>WhatsApp API</span>
+          <span>Next.js 16</span><span>TypeScript</span><span>React 19</span>
+          <span>AI SDK 7</span><span>Claude</span><span>OpenAI embeddings</span>
+          <span>Zod</span><span>Vitest</span><span>GitHub Actions</span>
         </div>
         <div class="links">
-          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
-          <a href="https://github.com/Bogdan0708/MitchAI" target="_blank" rel="noopener">↗ GitHub</a>
+          <a class="solid" href="https://github.com/Bogdan0708/grant-scout" target="_blank" rel="noopener">↗ Inspect code</a>
+        </div>
+      </article>
+
+      <!-- EuFund -->
+      <article class="project">
+        <span class="tag">Earlier prototype · Private source</span>
+        <h3><span class="name">EuFund</span> &mdash; AI-assisted EU funding workflow</h3>
+        <p class="subtitle">An active-development portfolio prototype for deterministic, auditable funding workflows.</p>
+        <p>
+          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
+          with structured outputs, citation enforcement, and cost-aware multi-provider LLM
+          routing. The source repository is private and there is no public or live deployment;
+          the case study remains available as design and implementation context.
+        </p>
+        <div class="stack">
+          <span>Next.js 14</span><span>TypeScript</span><span>FastAPI</span>
+          <span>PostgreSQL + RLS</span><span>Qdrant</span><span>Redis</span>
+          <span>Drizzle ORM</span><span>Docker</span>
+          <span>Claude</span><span>OpenAI</span><span>Gemini</span><span>Local LLMs</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
         </div>
       </article>
 
@@ -446,6 +442,28 @@
     </p>
 
     <div class="projects">
+
+      <!-- MitchAI -->
+      <article class="project">
+        <span class="tag">Supporting work · Hospitality</span>
+        <h3><span class="name">MitchAI</span> &mdash; hospitality operations AI workbench</h3>
+        <p class="subtitle">Active-development portfolio work; no live or production-service claim.</p>
+        <p>
+          The primary implementation is a Node.js/TypeScript/Express backend with a Next.js
+          frontend and PostgreSQL persistence. n8n workflows and Ollama are optional,
+          configured integrations rather than the core runtime. The repository documents a
+          broader agent vision, while current public evidence should be read as portfolio-stage.
+        </p>
+        <div class="stack">
+          <span>Node.js</span><span>TypeScript</span><span>Express</span>
+          <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
+          <span>n8n (optional)</span><span>Ollama (optional)</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a href="https://github.com/Bogdan0708/MitchAI" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </article>
 
       <!-- AI Gateway -->
       <article class="project">
@@ -536,7 +554,7 @@
     <h2>About</h2>
     <p class="lead">
       I bridge two worlds most candidates don't: 10+ years of hands-on business
-      operations and 6+ months of full-stack applied AI engineering.
+      operations and an applied AI portfolio grounded in workflows I know first-hand.
     </p>
 
     <div class="about-grid">
@@ -583,12 +601,12 @@
             <div class="label">Largest team led under live service</div>
           </div>
           <div class="stat">
-            <div class="big">3</div>
-            <div class="label">Production AI systems shipped end-to-end</div>
+            <div class="big">2</div>
+            <div class="label">Primary public proof repositories to inspect</div>
           </div>
           <div class="stat">
-            <div class="big">4×</div>
-            <div class="label">LLM providers in routed production</div>
+            <div class="big">30</div>
+            <div class="label">Dated funding records in Grant Scout's reviewable snapshot</div>
           </div>
           <div class="stat">
             <div class="big">+98%</div>
@@ -641,23 +659,23 @@
       </a>
       <a class="dl" href="EuFund_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">EuFund (5 pages)</div>
+        <div class="dl-title">EuFund (4 pages)</div>
         <div class="dl-meta">Architecture · multi-agent · multi-provider routing</div>
       </a>
       <a class="dl" href="PrimarIA_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">PrimarIA (5 pages)</div>
+        <div class="dl-title">PrimarIA (4 pages)</div>
         <div class="dl-meta">GovTech · role-scoping · audit trail</div>
       </a>
       <a class="dl" href="MitchAI_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">MitchAI (5 pages)</div>
+        <div class="dl-title">MitchAI (4 pages)</div>
         <div class="dl-meta">Vertical AI · hybrid local + cloud · n8n</div>
       </a>
       <a class="dl" href="https://github.com/Bogdan0708" target="_blank" rel="noopener">
         <div class="dl-eyebrow">Code</div>
         <div class="dl-title">GitHub · @Bogdan0708</div>
-        <div class="dl-meta">Pinned repos · EuFund, PrimarIA, MitchAI</div>
+        <div class="dl-meta">Start with PrimatIA and grant-scout</div>
       </a>
     </div>
   </div>
