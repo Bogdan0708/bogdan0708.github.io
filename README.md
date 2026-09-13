@@ -27,3 +27,7 @@ The PDFs are generated from the private `cv_other` repository's `build_recruiter
 - 📧 godjabogdan@gmail.com
 - 💼 [LinkedIn](https://www.linkedin.com/in/vasile-godja-6488051a5)
 - 💻 [GitHub](https://github.com/Bogdan0708)
+
+## Current operating scope
+
+AI Gateway, MitchAI, EuFund and PrimărIA are kept offline as portfolio implementations. Salt & Standard is the live business site; this GitHub Pages site publishes project evidence and recruiter documents. No application rollout is requested or implied.
