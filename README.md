@@ -2,12 +2,12 @@
 
 Recruiter-facing portfolio site for **Vasile Bogdan Godja** — Applied AI Engineer.
 
-The landing page leads with two public, inspectable proof assets:
+The Selected projects section starts with these two public, inspectable repositories, followed by the private-source EuFund prototype:
 
 - [PrimărIA](https://github.com/Bogdan0708/PrimatIA) — active-development GovTech portfolio implementation; no public deployment or production/compliance certification claimed
 - [Grant Scout](https://github.com/Bogdan0708/grant-scout) — Next.js/TypeScript agent demo over a dated 30-record funding snapshot, with deterministic eligibility, citations, tests, and CI; deployment pending
 
-EuFund remains an earlier portfolio prototype with a public case study, but its source repository is private. MitchAI is presented as supporting work with its current Node.js/TypeScript/Express, Next.js, and PostgreSQL implementation; n8n and Ollama are optional/configured integrations.
+EuFund has a public case study and the separate [eufund-exhibit](https://github.com/Bogdan0708/eufund-exhibit); its full platform source remains private. The workshop section includes Local AI Gateway, Local LLM MCP, AI Gateway and supporting domain projects. MitchAI is a Node.js/TypeScript/Express, Next.js and PostgreSQL prototype: local verification records 136 passing backend tests (49 skipped), plus eight n8n workflows exercised through ten synthetic HTTP scenarios. Provider calls and the database sink are substituted; historical disclosure cleanup and current production verification remain pending.
 
 **Live:** https://bogdan0708.github.io
 

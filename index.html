@@ -355,8 +355,8 @@
   <div class="container">
     <h2>Selected projects</h2>
     <p class="lead">
-      Start with two public, inspectable proof assets. Then read the EuFund case study for
-      the earlier private-source prototype that informed this work.
+      Start with the public projects below, then inspect the focused agent and infrastructure
+      examples. Each description distinguishes implementation, tests and hosted behavior.
     </p>
 
     <div class="projects">
@@ -392,8 +392,8 @@
         <p>
           Searches a curated 30-record snapshot dated 29 August 2026, applies deterministic
           eligibility checks, and cites official sources. CI runs lint, typecheck, tests, and
-          build. The documented 97.5% evaluation is historical and was not freshly reproduced
-          by the latest secret-free workflow run. Deployment is pending; this is not a live
+          build. Dated model-backed evaluation reports separately record tool use, retrieval,
+          citations and failures. Deployment is pending; this is not a live
           funding catalogue or funding advice.
         </p>
         <div class="stack">
@@ -434,7 +434,7 @@
   <div class="container">
     <h2>More from the workshop</h2>
     <p class="lead">
-      Supporting infrastructure, vertical experiments, and client work &mdash; each one
+      Supporting infrastructure, domain experiments, and business-focused tools &mdash; each one
       a different angle on the same operator-engineer profile.
     </p>
 
@@ -447,10 +447,11 @@
         <p class="subtitle">Active-development portfolio work; no live or production-service claim.</p>
         <p>
           The primary implementation is a Node.js/TypeScript/Express backend with a Next.js
-          frontend and PostgreSQL persistence. n8n master orchestrator with eight published
-          workflows (automations/n8n); Ollama and LM Studio providers for local inference. The
-          repository documents a broader agent vision, while current public evidence should be
-          read as portfolio-stage.
+          frontend and PostgreSQL persistence. Local verification: 136 backend tests pass,
+          49 are skipped. Eight n8n workflows execute through 10 synthetic HTTP scenarios,
+          including a simulated provider failure. Provider endpoints and the database sink
+          are substituted; the combo route returns a plan. Public-history cleanup and
+          current production verification remain pending.
         </p>
         <div class="stack">
           <span>Node.js</span><span>TypeScript</span><span>Express</span>
@@ -470,13 +471,13 @@
         <h3><span class="name">AI Gateway</span> &mdash; unified multi-provider LLM middleware</h3>
         <p class="subtitle">OpenAI-compatible router for OpenAI, Anthropic, Gemini, xAI, Groq, and Perplexity.</p>
         <p>
-          A single secure entry point for every LLM call across my projects. Token auth,
-          security headers, CORS, rate limiting, structured logging, and Cloud Run-optimised
-          cold starts. The boring infrastructure layer that makes everything else above it
-          look easy.
+          A multi-provider gateway consumed by PrimărIA’s fiscal assistant. Published source
+          includes token authentication, rate limiting, spend controls, structured logging
+          and response validation for selected JSON endpoints. Tests exercise routing and
+          failure handling; the live health response alone does not verify provider execution.
         </p>
         <p>
-          Live: <code>/health</code> responds 200 (v3.0.0) on Cloud Run (verified 2026-09-11;
+          Live: <code>/health</code> responds 200 (v3.0.0) on Cloud Run (verified 2026-09-13;
           deployed revision not yet tied to the published source).
         </p>
         <div class="stack">
@@ -488,63 +489,28 @@
         </div>
       </article>
 
-      <!-- Hospitality marketing assistant -->
+      <!-- local-ai-gateway -->
       <article class="project">
-        <span class="tag">Vertical AI · MCP</span>
-        <h3><span class="name">Hospitality Marketing Assistant</span> &mdash; MCP-server marketing stack</h3>
-        <p class="subtitle">Talk to your marketing stack in natural language, via Claude.</p>
-        <p>
-          Modular Python services exposed over Model Context Protocol &mdash; brand voice,
-          content automation, social analytics &mdash; orchestrated for hospitality
-          operators. Companion / precursor to the MitchAI Media agent, and a working
-          example of MCP-first product design.
-        </p>
-        <div class="stack">
-          <span>Python</span><span>MCP</span><span>PostgreSQL</span><span>Docker</span>
-          <span>Claude Desktop</span>
-        </div>
-        <div class="links">
-          <a href="https://github.com/Bogdan0708/hospitality_marketing_assistant_claude" target="_blank" rel="noopener">↗ GitHub</a>
-        </div>
+        <span class="tag">Public repository · Python / RAG</span>
+        <h3><span class="name">Local AI Gateway</span> &mdash; private knowledge-base service</h3>
+        <p class="subtitle">FastAPI, hybrid retrieval, document ingestion and an MCP bridge.</p>
+        <p>Inspectable local-model infrastructure with authenticated file access and
+          destination checks on web redirects. 83 tests, including security regressions.
+          No hosted service or new real-model quality benchmark is claimed.</p>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>RAG</span><span>MCP</span></div>
+        <div class="links"><a href="https://github.com/Bogdan0708/local-ai-gateway" target="_blank" rel="noopener">↗ GitHub</a></div>
       </article>
 
-      <!-- Lugano Car Rental -->
+      <!-- local-llm-mcp -->
       <article class="project">
-        <span class="tag">Client work · Swiss mobility</span>
-        <h3><span class="name">Lugano Car Rental</span> &mdash; premium mobility platform for Ticino</h3>
-        <p class="subtitle">Historical client booking platform for a Swiss car-rental operator.</p>
-        <p>
-          Historical client booking platform (FastAPI backend, React frontend, Stripe, PDF
-          invoices) for a Swiss car-rental operator. Shows the operator-engineer pattern
-          end-to-end &mdash; product design, implementation, and the commercial framing
-          that turns it into a real business.
-        </p>
-        <div class="stack">
-          <span>FastAPI</span><span>React</span><span>Stripe</span><span>Docker</span>
-        </div>
-        <div class="links">
-          <a href="https://github.com/Bogdan0708/LuganoCarRental" target="_blank" rel="noopener">↗ GitHub</a>
-        </div>
-      </article>
-
-      <!-- Mitch Chain -->
-      <article class="project">
-        <span class="tag">Experimental · Cosmos SDK</span>
-        <h3><span class="name">Mitch Chain</span> &mdash; Cosmos SDK L1 for the Mitch ecosystem</h3>
-        <p class="subtitle"><code>MTC</code> coin · loyalty + AI credits · IBC-ready.</p>
-        <p>
-          Application-specific Layer-1 designed to settle loyalty points across Mitch
-          outlets and meter AI-credit usage inside MitchAI. Cosmos SDK + Ignite scaffold,
-          CometBFT consensus, planned AWS deployment with Terraform + systemd + Prometheus.
-          Research-grade work-in-progress &mdash; published for visibility, not yet a mainnet.
-        </p>
-        <div class="stack">
-          <span>Go</span><span>Cosmos SDK</span><span>Ignite CLI</span><span>CometBFT</span>
-          <span>Protobuf</span><span>Terraform (planned)</span>
-        </div>
-        <div class="links">
-          <a href="https://github.com/Bogdan0708/coin_blockchain" target="_blank" rel="noopener">↗ GitHub</a>
-        </div>
+        <span class="tag">Public repository · MCP</span>
+        <h3><span class="name">Local LLM MCP</span> &mdash; inference queue and deadline handling</h3>
+        <p class="subtitle">A focused local-model integration with explicit failure behavior.</p>
+        <p>MCP tools over a local OpenAI-compatible model endpoint, with queueing,
+          deadlines and telemetry. 31 tests use local mock servers; benchmark reports
+          are historical measurements rather than a guarantee for another machine.</p>
+        <div class="stack"><span>JavaScript</span><span>MCP</span><span>Node.js</span></div>
+        <div class="links"><a href="https://github.com/Bogdan0708/local-llm-mcp" target="_blank" rel="noopener">↗ GitHub</a></div>
       </article>
 
       <!-- eufund-exhibit -->
@@ -554,11 +520,13 @@
         <p class="subtitle">Public exhibit extract from the EuFund prototype: write gates, cited retrieval, tiered routing.</p>
         <p>
           A publicly inspectable slice of the private EuFund agent runtime &mdash; phase-gated
-          execution, explicit write gates before any state-changing action, citation-enforced
-          retrieval, and tiered LLM routing by task cost. 57 tests, CI + Cloud Build pipeline.
+          execution, authorization checks for controlled write tools, citation-enforced
+          retrieval, and tiered LLM routing by task cost. Runs with synthetic fixtures and
+          injected providers; 57 tests and CI. A sanitised Cloud Build reference documents
+          the private platform’s deployment design; the exhibit excludes its database and app.
         </p>
         <div class="stack">
-          <span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Cloud Build</span>
+          <span>TypeScript</span><span>Node.js</span><span>Vitest</span><span>Synthetic fixtures</span>
         </div>
         <div class="links">
           <a href="https://github.com/Bogdan0708/eufund-exhibit" target="_blank" rel="noopener">↗ GitHub</a>
@@ -569,11 +537,12 @@
       <article class="project">
         <span class="tag">Public repository · Research agent</span>
         <h3><span class="name">Japan_Agent</span> &mdash; human-approved research agent</h3>
-        <p class="subtitle">Hash-chained audit ledger with Telegram approval tickets before any action executes.</p>
+        <p class="subtitle">Paper-first research infrastructure with proposal approval and an audit ledger.</p>
         <p>
-          A research agent built around a "refuse and route" posture: every consequential step
-          is written to a hash-chained ledger and held behind a human approval ticket sent over
-          Telegram before it executes. CI + extensive test suite.
+          Structured research is separated from order execution. Immutable proposal tickets,
+          Telegram approval, fresh-data checks and a hash-chained ledger govern the execution
+          path. Paper/research software; no live-trading permission or verified track record
+          is claimed.
         </p>
         <div class="stack">
           <span>Python</span><span>Telegram Bot API</span><span>Hash-chained ledger</span>
@@ -590,7 +559,9 @@
         <p class="subtitle">Human-in-the-loop response drafting for hospitality guest reviews.</p>
         <p>
           Pulls guest reviews, drafts an on-brand reply, holds it for human approval, then
-          publishes &mdash; no response goes out without a person in the loop. 11 tests.
+          publishes through an explicit approval workflow. The repository documents
+          publication state, reconciliation and tested failure cases; no live Google
+          Business Profile publication is claimed.
         </p>
         <div class="stack">
           <span>TypeScript</span><span>Node.js</span><span>LLM drafting</span>
@@ -620,12 +591,13 @@
 
       <!-- benjamins-at-the-landsby -->
       <article class="project">
-        <span class="tag">Client work · Hospitality ops</span>
-        <h3><span class="name">Benjamins at the Landsby</span> &mdash; 13 operator tools for a working restaurant</h3>
-        <p class="subtitle">Purpose-built operator tooling, not a demo.</p>
+        <span class="tag">Demonstration · Hospitality ops</span>
+        <h3><span class="name">Benjamins at the Landsby</span> &mdash; 13 hospitality operations tools</h3>
+        <p class="subtitle">Runnable operations demonstrations built around a restaurant-management application.</p>
         <p>
-          Thirteen focused tools covering the daily operational needs of a real restaurant,
-          built and tested against actual service rather than a portfolio simulation. 173 tests.
+          Thirteen focused tools for reconciliation, briefing, forecasting and reporting,
+          with synthetic sample data and inspectable outputs. 173 tests. The repository
+          demonstrates software behavior; restaurant adoption and business results are not claimed.
         </p>
         <div class="stack">
           <span>Python (standard library)</span><span>pytest (173 tests)</span>
