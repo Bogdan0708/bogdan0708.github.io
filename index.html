@@ -8,6 +8,9 @@
 <title>Vasile Bogdan Godja — Applied AI Engineer</title>
 <meta name="description" content="Founder-operator turned applied AI engineer. Inspectable portfolio systems for EU funding, public-sector, and hospitality workflows. Stack: TypeScript · Next.js · Node.js · Postgres · Docker · LLM tooling." />
 <meta property="og:title" content="Vasile Bogdan Godja — Applied AI Engineer" />
+<meta property="og:image" content="https://bogdan0708.github.io/assets/projects/portfolio-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:description" content="Applied AI portfolio: EuFund, MitchAI, PrimărIA, and supporting engineering work." />
 <style>
   :root {
@@ -152,7 +155,7 @@
     display: inline-block;
     background: var(--accent-soft);
     color: var(--accent-dark);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -277,7 +280,8 @@
     gap: 14px;
   }
   @media (min-width: 600px) {
-    .downloads { grid-template-columns: repeat(3, 1fr); }
+    .downloads { grid-template-columns: repeat(2, 1fr); }
+    .downloads .dl:last-child { grid-column: 1 / -1; }
   }
   .dl {
     background: var(--card);
@@ -288,7 +292,7 @@
   }
   .dl:hover { border-color: var(--accent); transform: translateY(-1px); text-decoration: none; }
   .dl .dl-eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: var(--accent-dark);
@@ -384,7 +388,7 @@
     <div class="projects">
 
       <article class="project" id="eufund">
-        <figure class="project-visual"><a href="assets/projects/eufund-workflow.png" aria-label="Open eufund evidence image at full size"><img src="assets/projects/eufund-workflow.png" width="1200" height="760" alt="Workflow map from the public exhibit; offline implementation." loading="lazy"></a><figcaption>Workflow map from the public exhibit; offline implementation.</figcaption></figure>
+        <figure class="project-visual"><a href="assets/projects/eufund-workflow.png" aria-label="Open eufund evidence image at full size"><img src="assets/projects/eufund-workflow.png" width="1200" height="760" alt="Workflow map from the public exhibit; offline implementation." loading="eager"></a><figcaption>Workflow map from the public exhibit; offline implementation.</figcaption></figure>
         <span class="tag">Selected project · Private source / public exhibit</span>
         <h3><span class="name">EuFund</span> &mdash; AI-assisted EU funding workflow</h3>
         <p class="subtitle">An active-development portfolio prototype for deterministic, auditable funding workflows.</p>
@@ -474,7 +478,7 @@
         </p>
         <p>
           Offline portfolio project. Source and tests are public; a hosted demo is intentionally
-          not offered. Salt &amp; Standard is the live business site.
+          not offered.
         </p>
         <div class="stack">
           <span>TypeScript</span><span>Node.js</span><span>Helmet</span><span>Pino</span>
@@ -569,7 +573,7 @@
 
       <!-- veloce-transfers-fare-engine -->
       <article class="project">
-        <span class="tag">Client work · Fare engine</span>
+        <span class="tag">Private-project extract · Fare engine</span>
         <h3><span class="name">Veloce Transfers</span> &mdash; deterministic fare engine</h3>
         <p class="subtitle">Rule-based pricing engine for a private transfer operator.</p>
         <p>
@@ -710,17 +714,17 @@
       <a class="dl" href="EuFund_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
         <div class="dl-title">EuFund (2 pages)</div>
-        <div class="dl-meta">Architecture · multi-agent · multi-provider routing</div>
+        <div class="dl-meta">Phase controls · cited retrieval · provider routing</div>
       </a>
       <a class="dl" href="MitchAI_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
         <div class="dl-title">MitchAI (2 pages)</div>
-        <div class="dl-meta">Vertical AI · hybrid local + cloud · n8n</div>
+        <div class="dl-meta">Hospitality workflows · n8n · synthetic execution</div>
       </a>
       <a class="dl" href="PrimarIA_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">PrimarIA (2 pages)</div>
-        <div class="dl-meta">GovTech · role-scoping · audit trail</div>
+        <div class="dl-title">PrimărIA (2 pages)</div>
+        <div class="dl-meta">Deterministic tax rules · tenant isolation · XML exports</div>
       </a>
       <a class="dl" href="https://github.com/Bogdan0708" target="_blank" rel="noopener">
         <div class="dl-eyebrow">Code</div>
