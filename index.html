@@ -94,7 +94,7 @@
     text-decoration: none;
     transition: all 0.15s;
   }
-  .cta.primary { background: var(--accent); color: #fff; }
+  .cta.primary { background: var(--accent-dark); color: #fff; }
   .cta.primary:hover { background: var(--accent-dark); color: #fff; text-decoration: none; }
   .cta.secondary {
     background: transparent;
@@ -205,7 +205,7 @@
     color: var(--accent-dark);
   }
   .project .links a:hover { background: var(--accent-soft); text-decoration: none; }
-  .project .links a.solid { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .project .links a.solid { background: var(--accent-dark); color: #fff; border-color: var(--accent-dark); }
   .project .links a.solid:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 
   /* ---------- About ---------- */
@@ -317,6 +317,26 @@
 
   /* small touches */
   .dot { color: var(--rule); margin: 0 4px; }
+
+  /* Evidence sits alongside each selected project; all three receive equal space. */
+  #projects .projects { grid-template-columns: 1fr; }
+  #projects .project { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1fr); column-gap: 28px; }
+  #projects .project > :not(.project-visual) { grid-column: 2; }
+  #projects .project .project-visual { grid-column: 1; grid-row: 1 / span 6; margin: 0; align-self: center; min-width: 0; }
+  .project-visual img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
+  .project-visual figcaption { font-size: 12px; line-height: 1.5; color: #555; margin-top: 9px; }
+  .project-visual a { display: block; }
+  .workshop-details summary { cursor: pointer; padding: 16px 18px; border: 1px solid var(--rule); border-radius: 8px; font-weight: 600; color: var(--accent-dark); }
+  .workshop-details[open] summary { margin-bottom: 22px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: 4px; }
+  @media (max-width: 700px) {
+    header.hero { padding: 36px 0; }
+    #projects .project { display: flex; }
+    #projects .project .project-visual { order: 0; margin-bottom: 16px; }
+    #projects .project > :not(.project-visual) { order: 1; }
+    .hero .contact-row { gap: 10px; }
+    .hero .contact-row .dot { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -327,17 +347,12 @@
     <h1>Vasile Bogdan <span class="accent">Godja</span></h1>
     <p class="title">Applied AI Engineer · AI Systems &amp; Workflow Automation</p>
 
-    <p class="pitch">
-      Founder-operator turned applied AI engineer. I build inspectable AI portfolio systems &mdash;
-      <em>multi-agent orchestration, RAG, and workflow automation</em> &mdash; for problems
-      I've personally worked inside: <strong>EU funding</strong>, <strong>public-sector
-      administration</strong>, and <strong>hospitality operations</strong>. 10+ years
-      running businesses end-to-end, including EU-funded project delivery.
-      I think like an operator and ship like an engineer.
-    </p>
+    <p class="pitch">I build <strong>AI workflows and full-stack applications</strong> for funding,
+      hospitality and municipal administration. My TypeScript, PostgreSQL and n8n work draws on
+      10+ years of operations leadership and EU-funded delivery.</p>
 
     <div class="contact-row">
-      <span>📍 London, UK · Remote preferred · Full UK/EU work rights</span><span class="dot">·</span>
+      <span>London, UK · Remote preferred · Full UK/EU work rights</span><span class="dot">·</span>
       <a href="mailto:godjabogdan@gmail.com">godjabogdan@gmail.com</a><span class="dot">·</span>
       <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">github.com/Bogdan0708</a><span class="dot">·</span>
       <a href="https://www.linkedin.com/in/vasile-godja-6488051a5" target="_blank" rel="noopener">LinkedIn</a>
@@ -346,7 +361,7 @@
     <div class="cta-row">
       <a class="cta primary" href="Vasile_Bogdan_Godja_AI_1page.pdf">Download CV (PDF)</a>
       <a class="cta secondary" href="#projects">Explore selected projects</a>
-      <a class="cta secondary" href="mailto:godjabogdan@gmail.com?subject=Applied%20AI%20Engineer%20role">Book a 20-min call</a>
+      <a class="cta secondary" href="mailto:godjabogdan@gmail.com?subject=Applied%20AI%20Engineer%20role">Email about a role</a>
     </div>
   </div>
 </header>
@@ -364,64 +379,41 @@
     <div class="projects">
 
       <article class="project" id="eufund">
+        <figure class="project-visual"><a href="assets/projects/eufund-workflow.png" aria-label="Open eufund evidence image at full size"><img src="assets/projects/eufund-workflow.png" width="1200" height="760" alt="Workflow map from the public exhibit; offline implementation." loading="lazy"></a><figcaption>Workflow map from the public exhibit; offline implementation.</figcaption></figure>
         <span class="tag">Selected project · Private source / public exhibit</span>
         <h3><span class="name">EuFund</span> &mdash; AI-assisted EU funding workflow</h3>
         <p class="subtitle">An active-development portfolio prototype for deterministic, auditable funding workflows.</p>
-        <p>
-          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
-          with structured outputs, citation enforcement, and cost-aware multi-provider LLM
-          routing. The source repository is private and there is no public or live deployment;
-          the case study and public exhibit provide design and implementation evidence.
-        </p>
+        <p>Turn funding discovery, eligibility and drafting into explicit, reviewable stages. Phase controls, tool allowlists and citation checks keep model work bounded. The main application is private; the public exhibit exposes the core controls.</p>
         <div class="stack">
           <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Qdrant</span>
         </div>
         <div class="links">
-          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a class="solid" href="EuFund_Case_Study.pdf">Case study (PDF)</a>
           <a href="https://github.com/Bogdan0708/eufund-exhibit" target="_blank" rel="noopener">↗ Public exhibit</a>
         </div>
       </article>
 
       <article class="project" id="mitchai">
+        <figure class="project-visual"><a href="assets/projects/mitchai-execution.png" aria-label="Open mitchai evidence image at full size"><img src="assets/projects/mitchai-execution.png" width="1200" height="760" alt="Saved synthetic n8n responses · 13 September 2026. Providers and database sink substituted." loading="lazy"></a><figcaption>Saved synthetic n8n responses · 13 September 2026. Providers and database sink substituted.</figcaption></figure>
         <span class="tag">Selected project · Hospitality</span>
         <h3><span class="name">MitchAI</span> &mdash; hospitality operations AI workbench</h3>
         <p class="subtitle">Hospitality operations prototype; currently offline.</p>
-        <p>
-          The primary implementation is a Node.js/TypeScript/Express backend with a Next.js
-          frontend and PostgreSQL persistence. 13 September verification: 193 backend tests pass,
-          with none skipped. Eight n8n workflows execute through 10 synthetic HTTP scenarios,
-          including a simulated provider failure. Provider endpoints and the database sink
-          are substituted; the combo route returns a plan. Public-history cleanup and
-          current production verification remain pending.
-        </p>
-        <div class="stack">
-          <span>Node.js</span><span>TypeScript</span><span>Express</span>
-          <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
-          <span>n8n</span><span>Ollama</span><span>LM Studio</span>
-        </div>
+        <p>Turn hospitality tasks into API-connected workflows for daily operations, menus, content and feedback. Eight n8n workflows were exercised in ten synthetic scenarios, including provider failure and parallel-branch merging. The case study explains the execution scope and pending public-history cleanup.</p>
+        <div class="stack"><span>TypeScript</span><span>Node.js</span><span>n8n</span><span>PostgreSQL</span></div>
         <div class="links">
-          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a class="solid" href="MitchAI_Case_Study.pdf">Case study (PDF)</a>
         </div>
       </article>
 
       <article class="project" id="primaria">
+        <figure class="project-visual"><a href="assets/projects/primaria-export.png" aria-label="Open primaria evidence image at full size"><img src="assets/projects/primaria-export.png" width="1200" height="760" alt="Historical prototype UI with empty export history; no current service or certification implied." loading="lazy"></a><figcaption>Historical prototype UI with empty export history; no current service or certification implied.</figcaption></figure>
         <span class="tag">Selected project · Municipal workflows</span>
-        <h3><span class="name">PrimărIA</span> &mdash; multi-tenant tax SaaS for Romanian municipalities</h3>
+        <h3><span class="name">PrimărIA</span> &mdash; municipal workflows and tenant isolation</h3>
         <p class="subtitle">Public GovTech portfolio implementation with tenant isolation and deterministic workflows.</p>
-        <p>
-          Active-development tax administration platform with deterministic calculations for
-          buildings, land, and vehicles; role-scoped portals; audit records; XML export tooling;
-          and offline-oriented PWA support. It is portfolio and pilot-stage work, with no public
-          deployment or production/compliance certification claimed.
-        </p>
-        <div class="stack">
-          <span>Next.js 14</span><span>TypeScript</span><span>PostgreSQL + RLS</span>
-          <span>Prisma 6</span><span>PgBouncer</span><span>Redis + BullMQ</span>
-          <span>MinIO</span><span>NextAuth v5</span><span>TOTP 2FA</span>
-          <span>@react-pdf/renderer</span><span>next-intl (RO/HU/EN)</span><span>Docker</span>
-        </div>
+        <p>Model municipal work with tenant-scoped records, deterministic tax calculations and reviewable exports. Next.js and PostgreSQL keep authoritative rules separate from AI assistance. The dated verification includes database isolation checks across 34 tenant tables.</p>
+        <div class="stack"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL + RLS</span><span>Prisma</span></div>
         <div class="links">
-          <a class="solid" href="PrimarIA_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a class="solid" href="PrimarIA_Case_Study.pdf">Case study (PDF)</a>
           <a href="https://github.com/Bogdan0708/PrimatIA" target="_blank" rel="noopener">↗ GitHub</a>
         </div>
       </article>
@@ -439,7 +431,7 @@
       a different angle on the same operator-engineer profile.
     </p>
 
-    <div class="projects">
+    <details class="workshop-details"><summary>Explore 9 supporting projects</summary><div class="projects">
 
       <!-- Grant Scout -->
       <article class="project">
@@ -605,7 +597,7 @@
         </div>
       </article>
 
-    </div>
+    </div></details>
   </div>
 </section>
 
@@ -621,8 +613,7 @@
     <div class="about-grid">
       <div>
         <p>
-          Before EuFund, PrimarIA, and MitchAI, I spent a decade running
-          high-performing teams in the UK hospitality industry &mdash; Restaurant
+          My operations background spans UK hospitality and EU-funded delivery. In the UK, I led teams as Restaurant
           Manager at <strong>108 Brasserie</strong> (Marylebone Hotel), Hospitality
           Manager at <strong>London Business School</strong> (50-person team serving
           1,000&ndash;2,000 guests/day), General Manager at <strong>The Crown</strong>
@@ -715,17 +706,17 @@
       </a>
       <a class="dl" href="EuFund_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">EuFund (4 pages)</div>
+        <div class="dl-title">EuFund (2 pages)</div>
         <div class="dl-meta">Architecture · multi-agent · multi-provider routing</div>
       </a>
       <a class="dl" href="MitchAI_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">MitchAI (4 pages)</div>
+        <div class="dl-title">MitchAI (2 pages)</div>
         <div class="dl-meta">Vertical AI · hybrid local + cloud · n8n</div>
       </a>
       <a class="dl" href="PrimarIA_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">PrimarIA (4 pages)</div>
+        <div class="dl-title">PrimarIA (2 pages)</div>
         <div class="dl-meta">GovTech · role-scoping · audit trail</div>
       </a>
       <a class="dl" href="https://github.com/Bogdan0708" target="_blank" rel="noopener">
