@@ -1,33 +1,19 @@
 # bogdan0708.github.io
 
-Recruiter-facing portfolio site for **Vasile Bogdan Godja** — Applied AI Engineer.
+Recruiter-facing portfolio for Vasile Bogdan Godja — Applied AI Engineer.
 
-The Selected projects section starts with these two public, inspectable repositories, followed by the private-source EuFund prototype:
+The selected projects are **EuFund, MitchAI and PrimărIA**, in that order. Grant Scout is retained in the supporting workshop section.
 
-- [PrimărIA](https://github.com/Bogdan0708/PrimatIA) — active-development GovTech portfolio implementation; no public deployment or production/compliance certification claimed
-- [Grant Scout](https://github.com/Bogdan0708/grant-scout) — Next.js/TypeScript agent demo over a dated 30-record funding snapshot, with deterministic eligibility, citations, tests, and CI; deployment pending
+- **EuFund:** private main source; public engineering exhibit and case study. Currently offline.
+- **MitchAI:** TypeScript / Node.js hospitality prototype and eight n8n workflows. September 13 evidence records ten synthetic execution scenarios and 193 backend tests without skips. Model endpoints and the fixture database sink are substituted. Currently offline; recorded history cleanup remains unresolved, so the featured card links to its case study.
+- **PrimărIA:** public municipal workflow implementation with deterministic domain rules and tenant isolation. Currently offline.
 
-EuFund has a public case study and the separate [eufund-exhibit](https://github.com/Bogdan0708/eufund-exhibit); its full platform source remains private. The workshop section includes Local AI Gateway, Local LLM MCP, AI Gateway and supporting domain projects. MitchAI is a Node.js/TypeScript/Express, Next.js and PostgreSQL prototype: local verification records 136 passing backend tests (49 skipped), plus eight n8n workflows exercised through ten synthetic HTTP scenarios. Provider calls and the database sink are substituted; historical disclosure cleanup and current production verification remain pending.
+The general CV uses the approved compact one-page sidebar layout and the same three selected projects. The site links to `Vasile_Bogdan_Godja_AI_1page.pdf`; the established `Vasile_Bogdan_Godja_AI.pdf` URL serves identical bytes for existing bookmarks. The three case studies retain their existing filenames and four-page layouts.
 
-**Live:** https://bogdan0708.github.io
+## Rebuilding
 
-## Contents
+The private CV workspace maintains the shared layout and current project descriptions in `docs/job-applications-2026-09-14/_source/`. `build_portfolio_cv.py` supplies a general profile without employer-specific application text; `build_recruiter_documents.py` renders both public CV aliases. Copy the verified PDF outputs here byte-for-byte. The three application packs remain local.
 
-- `index.html` — portfolio landing page (single file, no dependencies)
-- `Vasile_Bogdan_Godja_AI.pdf` — full CV (2 pages)
-- `Vasile_Bogdan_Godja_AI_1page.pdf` — startup CV (1 page)
-- `EuFund_Case_Study.pdf` — 4-page EuFund case study (source repository is private; no live-service claim)
-- `PrimarIA_Case_Study.pdf` — 4-page PrimărIA case study (public portfolio/pilot-stage GovTech work)
-- `MitchAI_Case_Study.pdf` — 4-page MitchAI case study (supporting hospitality AI work)
+Live portfolio: https://bogdan0708.github.io/
 
-The PDFs are generated from the private `cv_other` repository's `build_recruiter_documents.py` and copied here byte-for-byte; regenerate there rather than editing the binaries.
-
-## Contact
-
-- 📧 godjabogdan@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/in/vasile-godja-6488051a5)
-- 💻 [GitHub](https://github.com/Bogdan0708)
-
-## Current operating scope
-
-AI Gateway, MitchAI, EuFund and PrimărIA are kept offline as portfolio implementations. Salt & Standard is the live business site; this GitHub Pages site publishes project evidence and recruiter documents. No application rollout is requested or implied.
+AI Gateway, MitchAI, EuFund and PrimărIA remain offline. This update publishes only the portfolio page and recruiter documents; it does not deploy those applications. Salt & Standard remains the live business site.
