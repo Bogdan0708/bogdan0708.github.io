@@ -6,7 +6,7 @@
 <title>Vasile Bogdan Godja — Applied AI Engineer</title>
 <meta name="description" content="Founder-operator turned applied AI engineer. Inspectable portfolio systems for EU funding, public-sector, and hospitality workflows. Stack: TypeScript · Next.js · Node.js · Postgres · Docker · LLM tooling." />
 <meta property="og:title" content="Vasile Bogdan Godja — Applied AI Engineer" />
-<meta property="og:description" content="Applied AI portfolio: PrimărIA, Grant Scout, EuFund, and supporting engineering work." />
+<meta property="og:description" content="Applied AI portfolio: EuFund, MitchAI, PrimărIA, and supporting engineering work." />
 <style>
   :root {
     --accent: #8a9a7b;
@@ -168,6 +168,7 @@
   }
   .project h3 .name { color: var(--accent-dark); }
   .project .subtitle {
+    flex: none;
     font-size: 14px;
     color: var(--muted);
     margin: 0 0 14px 0;
@@ -331,20 +332,20 @@
       <em>multi-agent orchestration, RAG, and workflow automation</em> &mdash; for problems
       I've personally worked inside: <strong>EU funding</strong>, <strong>public-sector
       administration</strong>, and <strong>hospitality operations</strong>. 10+ years
-      running businesses end-to-end, including &euro;500K+ in EU-funded projects.
+      running businesses end-to-end, including EU-funded project delivery.
       I think like an operator and ship like an engineer.
     </p>
 
     <div class="contact-row">
-      <span>📍 London, UK</span><span class="dot">·</span>
+      <span>📍 London, UK · Remote preferred · Full UK/EU work rights</span><span class="dot">·</span>
       <a href="mailto:godjabogdan@gmail.com">godjabogdan@gmail.com</a><span class="dot">·</span>
       <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">github.com/Bogdan0708</a><span class="dot">·</span>
       <a href="https://www.linkedin.com/in/vasile-godja-6488051a5" target="_blank" rel="noopener">LinkedIn</a>
     </div>
 
     <div class="cta-row">
-      <a class="cta primary" href="Vasile_Bogdan_Godja_AI.pdf">Download CV (PDF)</a>
-      <a class="cta secondary" href="https://github.com/Bogdan0708/grant-scout" target="_blank" rel="noopener">Inspect Grant Scout</a>
+      <a class="cta primary" href="Vasile_Bogdan_Godja_AI_1page.pdf">Download CV (PDF)</a>
+      <a class="cta secondary" href="#projects">Explore selected projects</a>
       <a class="cta secondary" href="mailto:godjabogdan@gmail.com?subject=Applied%20AI%20Engineer%20role">Book a 20-min call</a>
     </div>
   </div>
@@ -355,15 +356,56 @@
   <div class="container">
     <h2>Selected projects</h2>
     <p class="lead">
-      Start with the public projects below, then inspect the focused agent and infrastructure
-      examples. Each description distinguishes implementation, tests and hosted behavior.
+      EuFund, MitchAI and PrimărIA connect applied AI engineering to funding, hospitality
+      and municipal workflows. All three are currently offline; explore their code, case
+      studies and dated evidence below.
     </p>
 
     <div class="projects">
 
-      <!-- PrimarIA -->
-      <article class="project">
-        <span class="tag">Primary proof · Active development</span>
+      <article class="project" id="eufund">
+        <span class="tag">Selected project · Private source / public exhibit</span>
+        <h3><span class="name">EuFund</span> &mdash; AI-assisted EU funding workflow</h3>
+        <p class="subtitle">An active-development portfolio prototype for deterministic, auditable funding workflows.</p>
+        <p>
+          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
+          with structured outputs, citation enforcement, and cost-aware multi-provider LLM
+          routing. The source repository is private and there is no public or live deployment;
+          the case study and public exhibit provide design and implementation evidence.
+        </p>
+        <div class="stack">
+          <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Qdrant</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
+          <a href="https://github.com/Bogdan0708/eufund-exhibit" target="_blank" rel="noopener">↗ Public exhibit</a>
+        </div>
+      </article>
+
+      <article class="project" id="mitchai">
+        <span class="tag">Selected project · Hospitality</span>
+        <h3><span class="name">MitchAI</span> &mdash; hospitality operations AI workbench</h3>
+        <p class="subtitle">Hospitality operations prototype; currently offline.</p>
+        <p>
+          The primary implementation is a Node.js/TypeScript/Express backend with a Next.js
+          frontend and PostgreSQL persistence. 13 September verification: 193 backend tests pass,
+          with none skipped. Eight n8n workflows execute through 10 synthetic HTTP scenarios,
+          including a simulated provider failure. Provider endpoints and the database sink
+          are substituted; the combo route returns a plan. Public-history cleanup and
+          current production verification remain pending.
+        </p>
+        <div class="stack">
+          <span>Node.js</span><span>TypeScript</span><span>Express</span>
+          <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
+          <span>n8n</span><span>Ollama</span><span>LM Studio</span>
+        </div>
+        <div class="links">
+          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
+        </div>
+      </article>
+
+      <article class="project" id="primaria">
+        <span class="tag">Selected project · Municipal workflows</span>
         <h3><span class="name">PrimărIA</span> &mdash; multi-tenant tax SaaS for Romanian municipalities</h3>
         <p class="subtitle">Public GovTech portfolio implementation with tenant isolation and deterministic workflows.</p>
         <p>
@@ -384,9 +426,24 @@
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORE FROM THE WORKSHOP ============ -->
+<section id="workshop">
+  <div class="container">
+    <h2>More from the workshop</h2>
+    <p class="lead">
+      Supporting infrastructure, domain experiments, and business-focused tools &mdash; each one
+      a different angle on the same operator-engineer profile.
+    </p>
+
+    <div class="projects">
+
       <!-- Grant Scout -->
       <article class="project">
-        <span class="tag">Primary proof · Public repository</span>
+        <span class="tag">Supporting work · Public repository</span>
         <h3><span class="name">Grant Scout</span> &mdash; cited EU funding agent demo</h3>
         <p class="subtitle">A deliberately small agentic-RAG system whose evidence and control flow can be inspected end-to-end.</p>
         <p>
@@ -403,65 +460,6 @@
         </div>
         <div class="links">
           <a class="solid" href="https://github.com/Bogdan0708/grant-scout" target="_blank" rel="noopener">↗ Inspect code</a>
-        </div>
-      </article>
-
-      <!-- EuFund -->
-      <article class="project">
-        <span class="tag">Earlier prototype · Private source</span>
-        <h3><span class="name">EuFund</span> &mdash; AI-assisted EU funding workflow</h3>
-        <p class="subtitle">An active-development portfolio prototype for deterministic, auditable funding workflows.</p>
-        <p>
-          Discovery &rarr; eligibility &rarr; proposal drafting &rarr; compliance review,
-          with structured outputs, citation enforcement, and cost-aware multi-provider LLM
-          routing. The source repository is private and there is no public or live deployment;
-          the case study remains available as design and implementation context.
-        </p>
-        <div class="stack">
-          <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Qdrant</span>
-        </div>
-        <div class="links">
-          <a class="solid" href="EuFund_Case_Study.pdf">📄 Case study (PDF)</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ MORE FROM THE WORKSHOP ============ -->
-<section id="workshop">
-  <div class="container">
-    <h2>More from the workshop</h2>
-    <p class="lead">
-      Supporting infrastructure, domain experiments, and business-focused tools &mdash; each one
-      a different angle on the same operator-engineer profile.
-    </p>
-
-    <div class="projects">
-
-      <!-- MitchAI -->
-      <article class="project">
-        <span class="tag">Supporting work · Hospitality</span>
-        <h3><span class="name">MitchAI</span> &mdash; hospitality operations AI workbench</h3>
-        <p class="subtitle">Active-development portfolio work; no live or production-service claim.</p>
-        <p>
-          The primary implementation is a Node.js/TypeScript/Express backend with a Next.js
-          frontend and PostgreSQL persistence. Local verification: 193 backend tests pass,
-          with none skipped. Eight n8n workflows execute through 10 synthetic HTTP scenarios,
-          including a simulated provider failure. Provider endpoints and the database sink
-          are substituted; the combo route returns a plan. Public-history cleanup and
-          current production verification remain pending.
-        </p>
-        <div class="stack">
-          <span>Node.js</span><span>TypeScript</span><span>Express</span>
-          <span>Next.js</span><span>PostgreSQL</span><span>Docker</span>
-          <span>n8n</span><span>Ollama</span><span>LM Studio</span>
-        </div>
-        <div class="links">
-          <a class="solid" href="MitchAI_Case_Study.pdf">📄 Case study (PDF)</a>
-          <a href="https://github.com/Bogdan0708/MitchAI" target="_blank" rel="noopener">↗ GitHub</a>
-          <a href="https://github.com/Bogdan0708/MitchAI/tree/master/automations/n8n" target="_blank" rel="noopener">↗ n8n automations</a>
         </div>
       </article>
 
@@ -653,27 +651,27 @@
         <div class="stats">
           <div class="stat">
             <div class="big">10+ yrs</div>
-            <div class="label">Operations leadership across UK hospitality</div>
+            <div class="label">Operations leadership and hospitality delivery</div>
           </div>
           <div class="stat">
-            <div class="big">&euro;500K+</div>
-            <div class="label">EU-funded projects I personally managed</div>
+            <div class="big">3 domains</div>
+            <div class="label">Funding, hospitality and municipal workflows</div>
           </div>
           <div class="stat">
-            <div class="big">50+</div>
+            <div class="big">50</div>
             <div class="label">Largest team led under live service</div>
           </div>
           <div class="stat">
-            <div class="big">2</div>
-            <div class="label">Primary public proof repositories to inspect</div>
+            <div class="big">3</div>
+            <div class="label">Selected projects with inspectable engineering evidence</div>
           </div>
           <div class="stat">
-            <div class="big">30</div>
-            <div class="label">Dated funding records in Grant Scout's reviewable snapshot</div>
+            <div class="big">8</div>
+            <div class="label">MitchAI n8n workflows exercised with synthetic providers</div>
           </div>
           <div class="stat">
-            <div class="big">+98%</div>
-            <div class="label">Online sales growth I drove (2020&ndash;2022)</div>
+            <div class="big">1 month</div>
+            <div class="label">Notice period for a new role</div>
           </div>
         </div>
       </aside>
@@ -706,39 +704,34 @@
   <div class="container">
     <h2>Documents</h2>
     <p class="lead">
-      Everything in one place &mdash; CV in two flavours, plus all three case studies.
+      The compact general CV and case studies for EuFund, MitchAI and PrimărIA.
     </p>
 
     <div class="downloads">
-      <a class="dl" href="Vasile_Bogdan_Godja_AI.pdf">
-        <div class="dl-eyebrow">CV · Full</div>
-        <div class="dl-title">Full CV (2 pages)</div>
-        <div class="dl-meta">Long form · for direct hiring conversations</div>
-      </a>
       <a class="dl" href="Vasile_Bogdan_Godja_AI_1page.pdf">
-        <div class="dl-eyebrow">CV · 1-page</div>
-        <div class="dl-title">Startup CV (1 page)</div>
-        <div class="dl-meta">Compact · for Wellfound / YC / Otta-style applications</div>
+        <div class="dl-eyebrow">CV · Compact sidebar</div>
+        <div class="dl-title">General CV (1 page)</div>
+        <div class="dl-meta">EuFund · MitchAI · PrimărIA</div>
       </a>
       <a class="dl" href="EuFund_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
         <div class="dl-title">EuFund (4 pages)</div>
         <div class="dl-meta">Architecture · multi-agent · multi-provider routing</div>
       </a>
-      <a class="dl" href="PrimarIA_Case_Study.pdf">
-        <div class="dl-eyebrow">Case study</div>
-        <div class="dl-title">PrimarIA (4 pages)</div>
-        <div class="dl-meta">GovTech · role-scoping · audit trail</div>
-      </a>
       <a class="dl" href="MitchAI_Case_Study.pdf">
         <div class="dl-eyebrow">Case study</div>
         <div class="dl-title">MitchAI (4 pages)</div>
         <div class="dl-meta">Vertical AI · hybrid local + cloud · n8n</div>
       </a>
+      <a class="dl" href="PrimarIA_Case_Study.pdf">
+        <div class="dl-eyebrow">Case study</div>
+        <div class="dl-title">PrimarIA (4 pages)</div>
+        <div class="dl-meta">GovTech · role-scoping · audit trail</div>
+      </a>
       <a class="dl" href="https://github.com/Bogdan0708" target="_blank" rel="noopener">
         <div class="dl-eyebrow">Code</div>
         <div class="dl-title">GitHub · @Bogdan0708</div>
-        <div class="dl-meta">Start with PrimatIA and grant-scout</div>
+        <div class="dl-meta">Explore eufund-exhibit and PrimatIA</div>
       </a>
     </div>
   </div>
