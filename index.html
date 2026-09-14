@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<link rel="canonical" href="https://bogdan0708.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vasile Bogdan Godja — Applied AI Engineer</title>
 <meta name="description" content="Founder-operator turned applied AI engineer. Inspectable portfolio systems for EU funding, public-sector, and hospitality workflows. Stack: TypeScript · Next.js · Node.js · Postgres · Docker · LLM tooling." />
@@ -9,7 +11,7 @@
 <meta property="og:description" content="Applied AI portfolio: EuFund, MitchAI, PrimărIA, and supporting engineering work." />
 <style>
   :root {
-    --accent: #8a9a7b;
+    --accent: #5a6b4d;
     --accent-dark: #5a6b4d;
     --accent-soft: #f1efe7;
     --bg: #fbfaf6;
@@ -261,8 +263,8 @@
     font-size: 14.5px;
   }
   .skill-row .cat {
-    display: inline-block;
-    min-width: 130px;
+    display: block;
+    margin-bottom: 5px;
     font-weight: 700;
     color: var(--accent-dark);
   }
@@ -337,6 +339,8 @@
     .hero .contact-row { gap: 10px; }
     .hero .contact-row .dot { display: none; }
   }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+@media print { details > * { display: block !important; } details::details-content { content-visibility: visible; } .project { break-inside: avoid; } }
 </style>
 </head>
 <body>
@@ -367,6 +371,7 @@
 </header>
 
 <!-- ============ PROJECTS ============ -->
+<main>
 <section id="projects">
   <div class="container">
     <h2>Selected projects</h2>
@@ -398,7 +403,7 @@
         <span class="tag">Selected project · Hospitality</span>
         <h3><span class="name">MitchAI</span> &mdash; hospitality operations AI workbench</h3>
         <p class="subtitle">Hospitality operations prototype; currently offline.</p>
-        <p>Turn hospitality tasks into API-connected workflows for daily operations, menus, content and feedback. Eight n8n workflows were exercised in ten synthetic scenarios, including provider failure and parallel-branch merging. The case study explains the execution scope and pending public-history cleanup.</p>
+        <p>Turn hospitality tasks into API-connected workflows for daily operations, menus, content and feedback. Eight n8n workflows were exercised in ten synthetic scenarios, including provider failure and parallel-branch merging. 193 backend tests passed in the dated verification. Source access is now private; credential revocation and history cleanup remain pending, as recorded in the case study.</p>
         <div class="stack"><span>TypeScript</span><span>Node.js</span><span>n8n</span><span>PostgreSQL</span></div>
         <div class="links">
           <a class="solid" href="MitchAI_Case_Study.pdf">Case study (PDF)</a>
@@ -406,15 +411,16 @@
       </article>
 
       <article class="project" id="primaria">
-        <figure class="project-visual"><a href="assets/projects/primaria-export.png" aria-label="Open primaria evidence image at full size"><img src="assets/projects/primaria-export.png" width="1200" height="760" alt="Historical prototype UI with empty export history; no current service or certification implied." loading="lazy"></a><figcaption>Historical prototype UI with empty export history; no current service or certification implied.</figcaption></figure>
+        <figure class="project-visual"><a href="assets/projects/primaria-controls.png" aria-label="Open PrimărIA controls diagram at full size"><img src="assets/projects/primaria-controls.png" width="1200" height="760" alt="Code-derived tenant and export controls. Diagram, not a product screenshot." loading="lazy"></a><figcaption>Code-derived tenant and export controls. Diagram, not a product screenshot.</figcaption></figure>
         <span class="tag">Selected project · Municipal workflows</span>
         <h3><span class="name">PrimărIA</span> &mdash; municipal workflows and tenant isolation</h3>
         <p class="subtitle">Public GovTech portfolio implementation with tenant isolation and deterministic workflows.</p>
-        <p>Model municipal work with tenant-scoped records, deterministic tax calculations and reviewable exports. Next.js and PostgreSQL keep authoritative rules separate from AI assistance. The dated verification includes database isolation checks across 34 tenant tables.</p>
+        <p>Model municipal work with tenant-scoped records, deterministic tax calculations and reviewable exports. Next.js and PostgreSQL keep authoritative rules separate from AI assistance. The verification covers 34 tenant tables: 318 offline tests plus 9 real-PostgreSQL isolation tests, both in CI.</p>
         <div class="stack"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL + RLS</span><span>Prisma</span></div>
         <div class="links">
           <a class="solid" href="PrimarIA_Case_Study.pdf">Case study (PDF)</a>
           <a href="https://github.com/Bogdan0708/PrimatIA" target="_blank" rel="noopener">↗ GitHub</a>
+          <a href="assets/projects/primaria-export.png">Historical UI capture</a>
         </div>
       </article>
 
@@ -606,8 +612,8 @@
   <div class="container">
     <h2>About</h2>
     <p class="lead">
-      I bridge two worlds most candidates don't: 10+ years of hands-on business
-      operations and an applied AI portfolio grounded in workflows I know first-hand.
+      I bring 10+ years of operations leadership to applied AI development,
+      with projects grounded in funding, hospitality and municipal workflows.
     </p>
 
     <div class="about-grid">
@@ -622,15 +628,13 @@
         </p>
         <p>
           I'm also the founder of <em>Mitch from Transylvania</em>, a London food-market
-          business, and former GM of a Romanian restoration company specialising in
-          UNESCO and heritage-listed sites &mdash; where I personally secured and
-          managed <strong>&euro;500K+ in EU grant funding</strong> end-to-end.
+          business started in early 2025. As General Manager at <strong>Taina Lemnului</strong> in Romania,
+          I managed EU-funded project delivery, documentation and audit requirements.
         </p>
         <p>
-          That operator background is the design substrate for everything I build.
-          I'm opinionated about which 20% of a workflow not to automate, and honest
-          about which AI surfaces deserve confidence and which deserve a hard
-          "refuse and route."
+          Since early 2025, my independent AI project work has focused on turning domain
+          requirements into tested applications. I use deterministic rules for authoritative
+          calculations and explicit review before external actions.
         </p>
         <p>
           Languages: English (fluent), Romanian (native), Spanish &amp; Italian
@@ -675,15 +679,14 @@
   <div class="container">
     <h2>Skills</h2>
     <p class="lead">
-      Hands-on across the stack &mdash; from agent orchestration down to the Postgres
-      indexes that make retrieval not embarrassing.
+      Technologies used across the selected projects and supporting repositories.
     </p>
 
     <div class="skills">
-      <div class="skill-row"><span class="cat">AI engineering</span><span class="items">LLM apps · multi-agent orchestration · RAG / vector search · structured outputs · multi-model routing · streaming · evals · observability · cost optimisation</span></div>
-      <div class="skill-row"><span class="cat">Backend &amp; infra</span><span class="items">Python · FastAPI · Next.js 14 / TypeScript · PostgreSQL · Qdrant · Drizzle · Redis · Docker · Google Cloud Run · REST · async I/O</span></div>
+      <div class="skill-row"><span class="cat">AI engineering</span><span class="items">LLM apps · controlled agent workflows · RAG / vector search · structured outputs · multi-model routing · streaming · evals · observability · cost optimisation</span></div>
+      <div class="skill-row"><span class="cat">Backend &amp; infra</span><span class="items">TypeScript · Next.js · Node.js · Python / FastAPI · PostgreSQL · Qdrant · Drizzle · Redis · Docker · Google Cloud Run · REST · async I/O</span></div>
       <div class="skill-row"><span class="cat">Automation &amp; workflow</span><span class="items">n8n · workflow design · event-driven systems · webhook integration · hybrid local + cloud LLMs</span></div>
-      <div class="skill-row"><span class="cat">Tooling</span><span class="items">Claude Code · Codex · Gemini CLI · Cursor · GitHub Actions · Cloud Build · gitleaks · Playwright · Vitest</span></div>
+      <div class="skill-row"><span class="cat">Tooling</span><span class="items">Git · GitHub Actions · pytest · Vitest · Playwright · Docker · gitleaks</span></div>
       <div class="skill-row"><span class="cat">Operations &amp; delivery</span><span class="items">Product thinking · P&amp;L ownership · stakeholder management · compliance workflows · EU-funded project delivery · cross-functional leadership</span></div>
       <div class="skill-row"><span class="cat">Languages</span><span class="items">English (fluent) · Romanian (native) · Spanish (intermediate) · Italian (intermediate) · French (beginner)</span></div>
     </div>
@@ -728,6 +731,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <p>
@@ -736,7 +740,7 @@
       <a href="https://github.com/Bogdan0708" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
       <a href="https://www.linkedin.com/in/vasile-godja-6488051a5" target="_blank" rel="noopener">LinkedIn</a>
     </p>
-    <p style="font-size:12px; opacity:0.6;">
+    <p style="font-size:12px;">
       Built single-file &mdash; no frameworks, no trackers, no JS dependencies.
     </p>
   </div>
